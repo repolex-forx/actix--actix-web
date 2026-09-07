@@ -1,0 +1,31 @@
+[2026-09-07T21:01:14Z] === ENRICH ITERATION 2 START | repo=actix/actix-web sha=5723cf48 ===
+[2026-09-07T21:01:14Z] [iter=2] PHASE START: enrich repo=actix/actix-web sha=5723cf48 runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/5723cf48-enrich-iter-002.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/5723cf486522d47aad26390cf5b02e95654ae225.nq.gz
+[2026-09-07T21:01:14Z] [iter=2] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-07T21:01:40Z] [iter=2] AST store loaded triples=3147553 load_secs=24 mem_mb=901 MB
+[2026-09-07T21:01:40Z] [iter=2] Step 2: Finding LSP targets mem_mb=901 MB
+[2026-09-07T21:01:48Z] [iter=2] LSP targets found call_sites=30844 imports=0 extends=0 implements=675 secs=8
+[2026-09-07T21:01:54Z] [iter=2] Loaded checkpoint partial graph triples=142610
+[2026-09-07T21:02:00Z] [iter=2] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=901 MB
+[2026-09-07T21:02:18Z] [iter=2] Position index built positions=210568 nodes_with_types=260855 secs=18 mem_mb=1094 MB
+[2026-09-07T21:02:18Z] [iter=2] Step 3: Starting LSP resolution mem_mb=1094 MB already_completed_types=[] already_completed_files=222
+[2026-09-07T21:02:18Z] [iter=2] Resolving target type target_type=call_site count=30844
+[2026-09-07T21:03:05Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=1.8 files_done=0 resolved=0 errors=0 current=actix-web/benches/service.rs
+[2026-09-07T21:04:21Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=3.1 files_done=1 resolved=2 errors=21 current=actix-web/src/test/test_services.rs
+[2026-09-07T21:04:55Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=3.7 files_done=3 resolved=27 errors=41 current=actix-http/src/test/ready_chunk_body.rs
+[2026-09-07T21:05:43Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=4.5 files_done=6 resolved=116 errors=53 current=awc/src/responses/read_body.rs
+[2026-09-07T21:06:17Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=5.0 files_done=12 resolved=161 errors=74 current=actix-web/src/helpers.rs
+[2026-09-07T21:06:49Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=5.6 files_done=16 resolved=180 errors=95 current=actix-web-codegen/tests/trybuild/routes-ok.rs
+[2026-09-07T21:07:58Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=6.7 files_done=19 resolved=200 errors=146 current=actix-http/src/test/pending_once_write_buf.rs
+[2026-09-07T21:08:46Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=7.5 files_done=22 resolved=270 errors=180 current=actix-web/src/lib.rs
+[2026-09-07T21:09:36Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=8.4 files_done=24 resolved=278 errors=216 current=actix-http/examples/actix-web.rs
+[2026-09-07T21:10:11Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=8.9 files_done=28 resolved=309 errors=241 current=actix-multipart/src/form/bytes.rs
+[2026-09-07T21:10:42Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=9.5 files_done=47 resolved=435 errors=262 current=actix-web/src/dev.rs
+[2026-09-07T21:11:14Z] [iter=2] HEARTBEAT target_type=call_site elapsed_min=10.0 files_done=68 resolved=483 errors=283 current=actix-web/src/http/header/if_modified_since.rs
+[2026-09-07T21:11:19Z] [iter=2] Target type resolved target_type=call_site resolved=483 errors=287 secs=541 mem_mb=1097 MB
+[2026-09-07T21:11:19Z] [iter=2] Resolving target type target_type=implements_clause count=675
+[2026-09-07T21:11:45Z] [iter=2] HEARTBEAT target_type=implements_clause elapsed_min=10.5 files_done=1 resolved=0 errors=0 current=actix-http/src/h1/service.rs
+[2026-09-07T21:11:51Z] [iter=2] Target type resolved target_type=implements_clause resolved=57 errors=0 secs=32 mem_mb=1097 MB
+[2026-09-07T21:14:08Z] [iter=2] Step 5: Writing final enrichment file triples=207522
+[2026-09-07T21:14:13Z] [iter=2] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/5723cf486522d47aad26390cf5b02e95654ae225.nq.gz size_kb=4766
+[2026-09-07T21:14:13Z] [iter=2] Checkpoint cleared (enrichment complete)
+[2026-09-07T21:14:13Z] [iter=2] PHASE END: enrich elapsed_s=778 elapsed_min=13.0 total_triples=207522
